@@ -2,6 +2,7 @@ import json
 import time
 from random import randrange
 
+
 def test_strong_prime(n, s, t):
     a = randrange(2, n - 1)
     b = pow(a, t, n)
