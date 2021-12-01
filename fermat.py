@@ -13,12 +13,13 @@ def fermat(n):
         if is_square(b2):
             return a - isqrt(b2)
         b2 = b2 + 2*a + 1
-    return -1 # We have a prime number
+    return -1  # We have a prime number
+
 
 with open("composite_list.json") as file:
     composite_list = json.load(file)
 
-print("Factorization with the Fermat algorithm.")
+print("Factoring with the Fermat algorithm.")
 print("The test runs on a list of composites that are the product of primes of identical bit lengths.")
 
 for n in composite_list:

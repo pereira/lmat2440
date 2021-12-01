@@ -3,6 +3,7 @@
 The following files are provided in support for the lectures discussing primality test algorihtms and factorization methods. 
 
 They offer a playground for testing some of the algorithms discussed in the class. 
+Documentation is largely missing, but the algorithms closely follow their description from the slides.
 
 They are organised as follows: 
 

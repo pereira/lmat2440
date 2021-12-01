@@ -34,7 +34,7 @@ def miller_rabin(n):
 with open("mixed_list.json") as file:
     mixed_list = json.load(file)
 
-print("Testing primality with the Miller-Rabin algorithm:")
+print("Testing primality with the Miller-Rabin algorithm.")
 
 for n in mixed_list:
     tic = time.perf_counter()

@@ -37,7 +37,7 @@ def miller_rabin(n):
     return -1
 
 
-print("Counting attempts when running Miller Rabin on random odd integers:")
+print("Counting attempts when running the Miller-Rabin algorithm on random odd integers.")
 
 for _ in range(20):
     n = get_odd_rand(bit_length)

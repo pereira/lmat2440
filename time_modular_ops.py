@@ -1,5 +1,4 @@
 from gmpy2 import next_prime, legendre, mpz
-#from secrets import randbits
 from random import getrandbits
 import time
 
@@ -69,7 +68,7 @@ def time_legendre():
 
 
 def time_pow():
-    """:performs op_number modular exponentiations for random integers of length in n_list
+    """:performs op_number modular exponentiations on random integers of length in n_list
         modulo a prime of the same length
     :returns an array with the time needed for each integer length"""
     op_number = 1000

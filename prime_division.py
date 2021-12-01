@@ -17,7 +17,7 @@ def primes_division(n):
 with open("mixed_list.json") as file:
     mixed_list = json.load(file)
 
-print("Testing primality through trial division:")
+print("Testing primality through trial division.")
 
 for n in mixed_list:
     tic = time.perf_counter()
