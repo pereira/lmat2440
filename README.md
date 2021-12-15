@@ -26,4 +26,4 @@ The files are organised as follows.
 
 ## Utils
 
-- `make_int_list.py` generates lists of integers of various lengths that are used in some of the algorithms. In particular, it produces the files `composite_list.json`, `mixed_list.json` and `prime_list.json`. 
+- `make_int_list.py` generates lists of integers of various lengths that are used in some algorithms. In particular, it produces the files `composite_list.json`, `mixed_list.json` and `prime_list.json`. 

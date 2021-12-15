@@ -2,8 +2,10 @@ from gmpy2 import next_prime, legendre, mpz
 from random import getrandbits
 import time
 
+# List of integer lengths that will be used in the benchmarks
 n_list = [1024, 2048, 4096, 8192]
-
+# Number of times that each operation will be performed in the benchmarks
+op_number = 1000
 
 def print_table(result):
     table_format = " {:>24}"
@@ -29,6 +31,8 @@ def get_rand_array(bit_length, len_array):
 
 def get_prime_list():
     """:returns an array of primes of lengths specified in n_list
+    Note that these primes are not uniformly distributed: the probability of a prime to be
+    picked is proportional to the distance between this prime and the previous prime.
     """
     print("Getting list of primes...")
     prime_list = [next_prime(get_rand(n)) for n in n_list]
@@ -39,7 +43,6 @@ def get_prime_list():
 def time_multiply():
     """:performs op_number modular multiplications of random integers of length in n_list
     :returns an array with the time needed for each integer length"""
-    op_number = 1000
     result = ["Multiplication (" + str(op_number) + ")"]
     for n in n_list:
         a_array = get_rand_array(n, op_number)
@@ -53,10 +56,9 @@ def time_multiply():
 
 
 def time_legendre():
-    """:performs op_number legendre symbol evaluation for random integers of length in n_list
+    """:performs op_number Legendre symbol evaluations for random integers of length in n_list
         modulo a prime of the same length
     :returns an array with the time needed for each integer length"""
-    op_number = 1000
     result = ["Legendre (" + str(op_number) + ")"]
     for n, p in zip(n_list, prime_list):
         b_array = get_rand_array(n, op_number)
@@ -68,10 +70,9 @@ def time_legendre():
 
 
 def time_pow():
-    """:performs op_number modular exponentiations on random integers of length in n_list
-        modulo a prime of the same length
+    """:performs op_number modular exponentiations modulo primes of length in n_list,
+        with exponents of the same length
     :returns an array with the time needed for each integer length"""
-    op_number = 1000
     result = ["Exponentiation (" + str(op_number) + ")"]
     for n, p in zip(n_list, prime_list):
         a_array = get_rand_array(n, op_number)
