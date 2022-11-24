@@ -43,8 +43,8 @@ for _ in range(20):
     n = get_odd_rand(bit_length)
     attempts = miller_rabin(n)
     if attempts == -1:
-        print(f"{n} is prime")
+        print(f"{n:40} is prime")
     elif attempts == 1:
-        print(f"{n} is composite -- 1 attempt")
+        print(f"{n:40} is composite -- 1 attempt")
     else:
-        print(f"{n} is composite: it took {attempts} attempts")
+        print(f"{n:40} is composite -- {attempts} attempts")

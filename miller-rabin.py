@@ -41,6 +41,6 @@ for n in mixed_list:
     prime = miller_rabin(n)
     toc = time.perf_counter()
     if prime:
-        print(f"{n} is prime (took {toc - tic:0.2} sec.)")
+        print(f"{n:25} is prime (took {toc - tic:4.2} sec.)")
     else:
-        print(f"{n} is composite (took {toc - tic:0.2} sec.)")
+        print(f"{n:25} is composite (took {toc - tic:4.2} sec.)")
